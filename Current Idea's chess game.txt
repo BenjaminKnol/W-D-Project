@@ -1,0 +1,11 @@
+Currently my idea is a chess game where we have the following objects:
+
+-Game board
+-game piece
+    *movement (has to be abstractish)
+    *attackArea
+-white team (maybe)
+-black team (maybe)
+-a class per different game piece
+
+If you disagree or have any better ideas that is obviously welcome.
