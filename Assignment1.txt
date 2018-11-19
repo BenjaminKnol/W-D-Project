@@ -17,3 +17,11 @@ Host: www.weer.nl
 
 3.2) At first I obviously get a 401 response as I have not provided any authorization. When using Authorization: Basic [base-64 encoded username/password string] I don't get a 401. I get a 200 status code.
 
+4.1) Chess will be implemented
+
+4.2) lichess.com, chess.com, chessmultiplayer.com, plainchess.timwoelfle.de. For our purposes, a design similar to plainchess.timewoelfle.de is the first goal.
+
+4.3) Lichess & chess.com are complex chess platforms which allows for anonymous and registered players alike to play games and keep scores. Furthermore, they offer different chess variations, study guides, tactics training, tournaments and more. For players looking to frequent chess sites and build up experiences these sites are fantastic options. However, for a simple no log-in required (anonymous) play - plainchess is a good choice. The downside to playchess (other than the lack of the many features) is that there is not as much traffic as the other bigger sites and you might have to wait until you match up with an opponent.
+
+5.x) See img/ resources.
+
