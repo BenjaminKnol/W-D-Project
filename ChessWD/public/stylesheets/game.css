@@ -1,7 +1,42 @@
-#chessBoard{
+.chessBoard{
+  position: absolute;
+  width: 660px;
+  height: 660px;
+  margin: 25px;
+  border: 10px solid black;
 }
+.black{
+  float:left;
+  width:80px;
+  height:80px;
+  background-color: #999;
+}
+.white{
+  float:left;
+  width:80px;
+  height:80px;
+  background-color: #ffff;
+}
+.lettering{
+  float:left;
+  width:80px;
+  height:20px;
+  text-align: center;
+  font-size: 20px;
+}
+.numbering{
+  float:left;
+  width:20px;
+  height: 80px;
+  text-align: center;
+  font-size:20px;
+}
+
 #pawn_BA{
-position: absolute;
-top: 80px;
-left: 0px;
+  position: absolute;
+  top: 80px;
+  left: 0px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: white;
 }
