@@ -1,9 +1,6 @@
-function init () {
-  createEmptyBoardUI()
-  initUIPieces()
-}
+var board = [[], [], [], [], [], [], [], []]
 
-function createEmptyBoardUI () {
+function createEmptyBoard () {
   var coords = ''
   for (var r = 0; r < 8; r++) {
     var col = ''
@@ -13,13 +10,13 @@ function createEmptyBoardUI () {
     }
     $('#chessboard').append('<tr>' + col + '</tr>')
   }
-  $('#chessboard tr td').click(function () {
-    var cellpos = $(this).attr('id')
-    console.log('cell:' + cellpos + ' clicked')
-  });
+  // $('#chessboard tr td').click(function () {
+  //   var cellpos = $(this).attr('id')
+  //   console.log('cell:' + cellpos + ' clicked')
+  // })
 }
 
-function initUIPieces () {
+function initPieces () {
   for (var r = 0; r < 8; r++) {
     var col = ''
     for (var c = 0; c < 8; c++) {
@@ -27,7 +24,7 @@ function initUIPieces () {
       PIECES.forEach(function (piece) {
         piece.startingPos.forEach(function (pos) {
           if (pos == coords) {
-            board[r][c] = piece;
+            board[r][c] = piece
             $('#' + coords).append(
               $(
                 "<img class='chesspiece' id=" +
@@ -36,12 +33,14 @@ function initUIPieces () {
                   piece.icon +
                   '>'
               )
-            );
+            )
           }
         })
       })
     }
   }
 }
-
-$(document).ready(init)
+$('#chessboard tr td').click(function () {
+  var cellpos = $(this).attr('id')
+  console.log('cell:' + cellpos + ' clicked')
+})
