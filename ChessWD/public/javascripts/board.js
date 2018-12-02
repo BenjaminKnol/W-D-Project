@@ -10,11 +10,8 @@ function createEmptyBoard () {
     }
     $('#chessboard').append('<tr>' + col + '</tr>')
   }
-  // $('#chessboard tr td').click(function () {
-  //   var cellpos = $(this).attr('id')
-  //   console.log('cell:' + cellpos + ' clicked')
-  // })
 }
+
 
 function initPieces () {
   for (var r = 0; r < 8; r++) {
@@ -40,7 +37,24 @@ function initPieces () {
     }
   }
 }
+
+// Cell listener
 $('#chessboard tr td').click(function () {
   var cellpos = $(this).attr('id')
-  console.log('cell:' + cellpos + ' clicked')
+  console.log('cell:' + cellpos + ' clicked') 
 })
+
+
+// note: rows start at 0
+// A8 is row 7
+function getRowFromCoord(coord){
+    return parseInt(coord.substring(1,2)) - 1;
+}
+
+// C4
+function getColFromCoord(coord){
+    return coord.charCodeAt(0) - 64;
+}
+
+console.log(getRowFromCoord("A8")); //7
+console.log(getColFromCoord("C4")); //3 
